@@ -1,0 +1,12 @@
+{
+    "name": "shapeways/datadog",
+    "description": "wrapper for datadog implementation of statsd",
+    "require": {
+        "lsjroberts/datadog-statsd": "^0.1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shapeways\\Datadog\\": "src/"
+        }
+    }
+}
