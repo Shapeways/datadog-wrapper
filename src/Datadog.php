@@ -12,16 +12,6 @@ use DataDog\Statsd\Statsd;
 
 class Datadog
 {
-  const SHAPESTOR_PICTURE_TAG    = 'picture';
-  const SHAPESTOR_AVATAR_TAG     = 'avatar';
-  const SHAPESTOR_SHOP_TAG       = 'shop';
-  const SHAPESTOR_BLOG_TAG       = 'blog';
-  const SHAPESTOR_UPS_TAG        = 'ups';
-  const SHAPESTOR_MODEL_TAG      = 'model';
-  const SHAPESTOR_ORDER_TAG      = 'order';
-  const SHAPESTOR_OTHER_TAG      = 'other';
-  const SHAPESTOR_UNKNOWN_TAG    = 'unknown';
-
   private $statsdClient = null;
   private $emitMetrics = false;
   private $statsdTags = [];
@@ -33,14 +23,14 @@ class Datadog
    * @param $statsdNamespace
    * @param $appName
    */
-  public function __construct($config, $statsdNamespace, $appName)
+  public function __construct(string $env, string $statsdNamespace, string $appName, bool $emitMetrics = false)
   {
-    $this->emitMetrics = $config->emitMetrics ?? false;
+    $this->emitMetrics = $emitMetrics;
     $this->statsdNamespace = $statsdNamespace;
     $this->statsdClient = new Statsd();
     $this->statsdTags['appname'] = $appName;
     $this->statsdTags['status'] = 200;
-    $this->statsdTags['env'] = $config->env;
+    $this->statsdTags['env'] = $env;
   }
 
   /**

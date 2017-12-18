@@ -64,3 +64,9 @@ composer.lock
 # End of https://www.gitignore.io/api/phpstorm,composer
 
 .idea/php.xml
+.idea/codeStyles/codeStyleConfig.xml
+.DS_Store
+.idea/codeStyles/Project.xml
+.idea/modules.xml
+.idea/shapeways-datadog.iml
+.idea/vcs.xml
