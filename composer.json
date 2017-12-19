@@ -8,5 +8,9 @@
         "psr-4": {
             "Shapeways\\Datadog\\": "src/"
         }
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "preferred-install": "dist"
     }
 }
