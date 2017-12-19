@@ -1,5 +1,5 @@
 {
-    "name": "shapeways/datadog",
+    "name": "shapeways/datadog-wrapper",
     "description": "wrapper for datadog implementation of statsd",
     "require": {
         "lsjroberts/datadog-statsd": "^0.1.1"
